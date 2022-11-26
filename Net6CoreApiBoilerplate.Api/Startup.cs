@@ -1,4 +1,3 @@
-using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -113,11 +112,6 @@ namespace Net6CoreApiBoilerplate.Api
             {
                 endpoints.MapControllers();
             });
-        }
-
-        public void ConfigureContainer(ContainerBuilder builder)
-        {
-            AutofacContainer.Configure(builder, Settings, Configuration);
         }
     }
 }
