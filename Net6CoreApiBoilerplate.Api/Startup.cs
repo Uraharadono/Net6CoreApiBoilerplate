@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Net6CoreApiBoilerplate.Api.Infrastructure;
 using Net6CoreApiBoilerplate.Api.Infrastructure.Helpers;
+using Net6CoreApiBoilerplate.Api.Utility.Extensions;
 using Net6CoreApiBoilerplate.DbContext.Infrastructure;
 using Net6CoreApiBoilerplate.Infrastructure.Settings;
 using Newtonsoft.Json.Serialization;
@@ -53,6 +54,12 @@ namespace Net6CoreApiBoilerplate.Api
             IdentityHelper.ConfigureService(services);
             AuthenticationHelper.ConfigureService(services, Settings.Issuer, Settings.Audience, Settings.Key);
             // AuthenticationHelper.ConfigureServiceSimple(services, Settings.Issuer, Settings.Audience, Settings.Key);
+
+            // Register UoW and other helper services
+            services.RegisterUtilityServices(Configuration);
+
+            // Do our magic to load services automatically, and resolve their DI
+            services.AutoRegisterServices();
 
             services.AddCors(options =>
             {

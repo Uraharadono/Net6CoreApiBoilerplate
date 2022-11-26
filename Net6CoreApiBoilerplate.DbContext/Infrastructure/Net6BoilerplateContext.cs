@@ -21,7 +21,7 @@ namespace Net6CoreApiBoilerplate.DbContext.Infrastructure
             // this.ChangeTracker.LazyLoadingEnabled = false;
         }
 
-        public static Net6BoilerplateContext Create(string connection, int organizationType)
+        public static Net6BoilerplateContext Create(string connection)
         {
             var optionsBuilder = new DbContextOptionsBuilder<Net6BoilerplateContext>();
             optionsBuilder.UseSqlServer(connection);

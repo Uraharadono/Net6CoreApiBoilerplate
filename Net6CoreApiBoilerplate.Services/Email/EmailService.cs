@@ -4,11 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using Net6CoreApiBoilerplate.Infrastructure.Services;
 using Net6CoreApiBoilerplate.Infrastructure.Settings;
 
 namespace Net6CoreApiBoilerplate.Services.Email
 {
-    public interface IEmailService
+    public interface IEmailService : IService
     {
         Task SendAsync(string subject, string body, string from, string to);
         Task<bool> Send(MailMessage message, IEnumerable<Attachment> attachments = null, List<string> bcc = null);
