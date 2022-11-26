@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Net6CoreApiBoilerplate.DbContext\Net6CoreApiBoilerplate.DbContext.csproj" />
+    <ProjectReference Include="..\Net6CoreApiBoilerplate.Infrastructure\Net6CoreApiBoilerplate.Infrastructure.csproj" />
+    <ProjectReference Include="..\Net6CoreApiBoilerplate.Utility\Net6CoreApiBoilerplate.Utility.csproj" />
+  </ItemGroup>
+
+</Project>
