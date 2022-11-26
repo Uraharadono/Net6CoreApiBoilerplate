@@ -9,7 +9,7 @@ using Net6CoreApiBoilerplate.Services.Blog.Dto;
 
 namespace Net6CoreApiBoilerplate.Api.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BlogsController : BaseController
