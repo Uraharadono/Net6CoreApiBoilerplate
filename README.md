@@ -1,4 +1,4 @@
-# Net6CoreApiBoilerplate
+# Net 6 Core Api - Boilerplate with built in auto-discover DI
 
 
 ## What ?
