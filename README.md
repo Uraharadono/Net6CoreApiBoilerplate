@@ -6,7 +6,7 @@
 A `.Net 6 API` project (I'll make a `.Net 7` one soon because I'm terrible at naming and couldn't figure out a proper one without naming it), which includes:
 
 - `Microsoft.AspNetCore.Identity` that is managing users and is using `JSON Web Token (JWT)` for auth. It is based on `Identity Server`, and you can easily change it to use `Identity Server` instead (see `AuthenticationHelper.cs line 57`).
-- We'll use `Autofac to register our Dependency Injection` code. I prefer to use the built in Microsoft one, but I did it with `Autofac` just for exercise.
+- We'll use `Autofac to register our Dependency Injection` code. **I prefer to use the built in Microsoft one**, but I did it with `Autofac` just for exercise.
 - I implemented a `Unit-Of-Work pattern` that meets my needs and the needs of the projects I am working on quite well. Keep in mind that this version was written to support the running of stored procedures as well as to run queries in transactions.
 - Added usage of `Sequences as primary key` for table. (See the 2nd point in "Why?" below. )
 - Modular `CORS` registration
@@ -18,7 +18,7 @@ A `.Net 6 API` project (I'll make a `.Net 7` one soon because I'm terrible at na
 For my and possibly your prototyping. Also, there is an ease of mind when there is a take home assignment to be done, so I can get quickly to the core of the problem without rushing to setup everything and wasting precious time.
 
 The second reason is that I recently had an issue with supporting an old system that has a database with 500 tables that don't have Identity set as PK. I had to use `SQL Sequences` to achieve this (https://github.com/dotnet/efcore/issues/26480), and I think there is really a huge gap with supporting things that do not fit the "newest and greatest" narrative.
-Sometimes you just have to support legacy, and that's it.
+**Sometimes you just have to support legacy, and that's it.**
 
 ## Before running the project
 
