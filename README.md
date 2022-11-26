@@ -26,17 +26,17 @@ Nothing. Optionally, you can create a database called `BloggingDb` on your prefe
 
 ## Run the project
 
-
+```
 1. Open npm console (Visual studio: View -> Other windows -> Package Manager Console)
 2. Type command: Update-Database to EF Core run migrations
 3. Run the api project
-
+```
 
 # Note for 401
 
-If you get a 401 Status Code, it means you are not authorized. You can either remove the [Authorize] attribute on the controller or login and add the bearer token to the top of the page with Swagger.
+If you get a `401 Status Code`, it means you are not authorized. You can either remove the `[Authorize]` attribute on the `Controller` or login and add the bearer token to the top of the page with `Swagger`.
 
 
 # Plans for future? 
 
-I think it would be good to add some example code for the EF Interceptors and EF Global filters. 
+I think it would be good to add some example code for the `EF Interceptors` and `EF Global filters`. 
