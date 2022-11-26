@@ -60,7 +60,7 @@ namespace Net6CoreApiBoilerplate.DbContext.Infrastructure
 
             #region Global filters
             // https://docs.microsoft.com/en-us/ef/core/querying/filters
-            // modelBuilder.Entity<Blog>().HasQueryFilter(a => a.OrganisationType == OrganizationType);
+            // modelBuilder.Entity<Blog>().HasQueryFilter(a => a.PublisherId == PublisherId);
             #endregion
 
             #region Sequences 

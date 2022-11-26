@@ -47,12 +47,6 @@ namespace Net6CoreApiBoilerplate.Api.Infrastructure
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
-
-            // TODO: // Emails 
-            //builder.RegisterType<EmailService>()
-            //    .As<IEmailService>()
-            //    .SingleInstance();
-
             // Controllers
             builder.RegisterAssemblyTypes(typeof(BlogsController).Assembly)
                 .OnActivating(e => PrepareController(e.Context, e.Instance as BaseController));

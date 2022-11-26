@@ -5,7 +5,6 @@ using Microsoft.Extensions.Hosting;
 
 namespace Net6CoreApiBoilerplate.Api
 {
-    // public static class Program
     public class Program
     {
         [STAThread]

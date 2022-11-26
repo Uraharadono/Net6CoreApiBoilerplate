@@ -30,7 +30,6 @@ namespace Net6CoreApiBoilerplate.Api.Controllers.Identity
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<ApplicationRole>), 200)]
         [Route("get")]
-        //[HttpGet("GetAll")]
         public IActionResult GetAll()
         {
             try

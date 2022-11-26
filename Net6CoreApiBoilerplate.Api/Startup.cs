@@ -64,7 +64,6 @@ namespace Net6CoreApiBoilerplate.Api
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials();
-                    // .WithMethods("PUT", "DELETE", "GET", "POST");
                 });
             });
 
@@ -72,37 +71,11 @@ namespace Net6CoreApiBoilerplate.Api
             {
                 SwaggerHelper.ConfigureService(services);
             }
-
-
-            //services.AddControllers();
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Core6ApiBoilerplate", Version = "v1" });
-            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //    app.UseSwagger();
-            //    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Core5ApiBoilerplate v1"));
-            //}
-
-            //app.UseHttpsRedirection();
-
-            //app.UseRouting();
-
-            //app.UseAuthorization();
-
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllers();
-            //});
-
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
