@@ -1,10 +1,11 @@
-# Net 6 Core Api - Boilerplate with built in auto-discover DI
+# Net 6 Core Api - Boilerplate (with built in auto-discover DI)
 
 
 ## What ?
 
 A `.Net 6 API` project (I'll make a `.Net 7` one soon because I'm terrible at naming and couldn't figure out a proper one without naming it), which includes:
 
+- Autodiscover services 
 - `Microsoft.AspNetCore.Identity` that is managing users and is using `JSON Web Token (JWT)` for auth. It is based on `Identity Server`, and you can easily change it to use `Identity Server` instead (see `AuthenticationHelper.cs line 57`).
 - We'll use `Autofac to register our Dependency Injection` code. **I prefer to use the built in Microsoft one**, but I did it with `Autofac` just for exercise.
 - I implemented a `Unit-Of-Work pattern` that meets my needs and the needs of the projects I am working on quite well. Keep in mind that this version was written to support the running of stored procedures as well as to run queries in transactions.
