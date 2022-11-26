@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Net6CoreApiBoilerplate.DbContext.Entities;
 using Net6CoreApiBoilerplate.DbContext.Entities.Identity;
+using System.Diagnostics;
 
 namespace Net6CoreApiBoilerplate.DbContext.Infrastructure
 {
@@ -25,6 +26,13 @@ namespace Net6CoreApiBoilerplate.DbContext.Infrastructure
         {
             var optionsBuilder = new DbContextOptionsBuilder<Net6BoilerplateContext>();
             optionsBuilder.UseSqlServer(connection);
+            // optionsBuilder.AddInterceptors(Net6BoilerplateInterceptors.CreateInterceptors());
+
+            // Helps me with debugging stuff
+            optionsBuilder.EnableDetailedErrors();
+            optionsBuilder.EnableSensitiveDataLogging();
+            optionsBuilder.LogTo(message => Debug.WriteLine(message)); // https://learn.microsoft.com/en-us/ef/core/logging-events-diagnostics/simple-logging
+
             return new Net6BoilerplateContext(optionsBuilder.Options);
         }
 

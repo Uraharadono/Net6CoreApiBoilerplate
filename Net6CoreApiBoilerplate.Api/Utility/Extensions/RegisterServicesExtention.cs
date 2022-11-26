@@ -21,10 +21,9 @@ namespace Net6CoreApiBoilerplate.Api.Utility.Extensions
 
             var deronContext = Net6BoilerplateContext.Create(configuration.GetConnectionString("BloggingDb"));
             // Both Singleton and Scoped work - at the moment I feel much better with scoped
-            // services.AddSingleton<IUnitOfWork>(x => new UnitOfWork(deronContext));
-            services.AddScoped<IUnitOfWork>(x => new UnitOfWork(deronContext));
-
+            services.AddSingleton<IUnitOfWork>(x => new UnitOfWork(deronContext));
         }
+
         public static void AutoRegisterServices(this IServiceCollection services)
         {
             // First we need to register ISettings, IEmailSettings etc. 
