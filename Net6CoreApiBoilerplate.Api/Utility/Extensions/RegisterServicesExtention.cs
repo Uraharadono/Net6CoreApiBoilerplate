@@ -20,7 +20,7 @@ namespace Net6CoreApiBoilerplate.Api.Utility.Extensions
             // Unit of work
 
             var deronContext = Net6BoilerplateContext.Create(configuration.GetConnectionString("BloggingDb"));
-            // Both Singleton and Scoped work - at the moment I feel much better with scoped
+            // Only Singleton will work - as UoW will get recycled after 1 call and then it will become unusable 
             services.AddSingleton<IUnitOfWork>(x => new UnitOfWork(deronContext));
         }
 
